@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+
+
+
+for i in {0..255}
+do
+    printf "$(tput setab $i)$i$(tput sgr0) "
+done

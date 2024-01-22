@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+
+
+
+RED=$(tput setab 1)
+BG=$(tput setab 2)
+
+ott=$(acpi | awk '{print $3 " " $4}')
+f=$(acpi | awk '{print $5}')
+f=$(echo $f | sed 's/,//')
+t=$(acpi | awk '{print $4}' | sed 's/%,//')
+
+if (( t < 25 ))
+then
+    echo -e ${BG}${RED}$ott $f$(tput sgr0)
+else
+    echo -e ${BG}$ott $f$(tput sgr0)
+fi
