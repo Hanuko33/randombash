@@ -4,7 +4,7 @@
 
 
 RED=$(tput setab 1)
-BG=$(tput setab 2)
+BG=$(tput setab 28)
 
 ott=$(acpi | awk '{print $3 " " $4}')
 f=$(acpi | awk '{print $5}')
